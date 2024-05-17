@@ -16,13 +16,13 @@ public class PatientController {
     @GetMapping("/register")
     public String showRegistrationForm(Model model) {
         model.addAttribute("patient", new Patient());
-        return "register";
+        return "register"; // This should match the template name
     }
 
     @PostMapping("/register")
     public String registerPatient(Patient patient, Model model) {
         patientRepository.save(patient);
         model.addAttribute("patient", patient);
-        return "registrationSummary";
+        return "registrationSummary"; // This should match the template name
     }
 }
