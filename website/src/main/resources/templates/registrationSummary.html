@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Registration Summary</title>
+</head>
+<body>
+<h1>Registration Summary</h1>
+<p>Name: <span th:text="${patient.name}"></span></p>
+<p>Family: <span th:text="${patient.family}"></span></p>
+<p>Age: <span th:text="${patient.age}"></span></p>
+<p>Insurance Type: <span th:text="${patient.insuranceType}"></span></p>
+<p>Problems: <span th:text="${patient.problems}"></span></p>
+<p>Additional Info: <span th:text="${patient.additionalInfo}"></span></p>
+<button onclick="window.location.href='/register'">OK</button>
+</body>
+</html>
