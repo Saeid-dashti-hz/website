@@ -2,18 +2,54 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Patient Registration</title>
+    <style>
+        body {
+            background-color: #87CEEB;
+            color: #000080;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #000080;
+        }
+        form {
+            background-color: #FFFFFF;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #000080;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <h1>Register</h1>
 <form th:action="@{/register}" th:object="${patient}" method="post">
     <label for="name">Name:</label>
-    <input type="text" id="name" th:field="*{name}" /><br/>
+    <input type="text" id="name" th:field="*{name}" required/><br/>
 
     <label for="family">Family:</label>
-    <input type="text" id="family" th:field="*{family}" /><br/>
+    <input type="text" id="family" th:field="*{family}" required/><br/>
 
     <label for="age">Age:</label>
-    <input type="number" id="age" th:field="*{age}" /><br/>
+    <input type="number" id="age" th:field="*{age}" required/><br/>
 
     <label for="insuranceType">Insurance Type:</label>
     <select id="insuranceType" th:field="*{insuranceType}">
@@ -24,7 +60,15 @@
     <label>Problems:</label><br/>
     <input type="radio" th:field="*{problems}" value="Problem 1"/> Problem 1<br/>
     <input type="radio" th:field="*{problems}" value="Problem 2"/> Problem 2<br/>
-    <!-- Add more radio buttons as needed -->
+    <input type="radio" th:field="*{problems}" value="Problem 3"/> Problem 3<br/>
+    <input type="radio" th:field="*{problems}" value="Problem 4"/> Problem 4<br/>
+    <input type="radio" th:field="*{problems}" value="Problem 5"/> Problem 5<br/>
+    <input type="radio" th:field="*{problems}" value="Problem 6"/> Problem 6<br/>
+    <input type="radio" th:field="*{problems}" value="Problem 7"/> Problem 7<br/>
+    <input type="radio" th:field="*{problems}" value="Problem 8"/> Problem 8<br/>
+    <input type="radio" th:field="*{problems}" value="Problem 9"/> Problem 9<br/>
+    <input type="radio" th:field="*{problems}" value="Problem 10"/> Problem 10<br/>
+
     <label for="additionalInfo">Additional Info:</label>
     <textarea id="additionalInfo" th:field="*{additionalInfo}"></textarea><br/>
 
