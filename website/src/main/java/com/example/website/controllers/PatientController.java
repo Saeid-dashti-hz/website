@@ -1,6 +1,6 @@
-package com.example.website.controller;
+package com.example.website.controllers;
 
-import com.example.website.model.Patient;
+import com.example.website.models.Patient;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;

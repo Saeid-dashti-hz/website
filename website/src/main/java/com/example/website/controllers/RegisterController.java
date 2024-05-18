@@ -1,7 +1,7 @@
-package com.example.website.controller;
+package com.example.website.controllers;
 
-import com.example.website.model.Patient;
-import com.example.website.model.User;
+import com.example.website.models.Patient;
+import com.example.website.models.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
