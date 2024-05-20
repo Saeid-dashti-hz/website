@@ -1,48 +1,21 @@
-package com.example.website.models;
+package com.example.website.dtos;
 
-import jakarta.persistence.*;
+import com.example.website.models.InsuranceType;
+import com.example.website.models.Problem;
 import java.time.LocalDate;
 import java.util.List;
 
-@Entity
-@Table(name = "patients")
-public class Patient {
+public class PatientDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "name", nullable = false)
     private String name;
-
-    @Column(name = "family", nullable = false)
     private String family;
-
-    @Column(name = "birth_date", nullable = false)
     private LocalDate birthDate;
-
-    @Column(name = "postal_code", nullable = false)
     private String postalCode;
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "insurance_type", nullable = false)
     private InsuranceType insuranceType;
-
-    @Column(name = "additional_info")
     private String additionalInfo;
-
-    @ElementCollection(targetClass = Problem.class)
-    @CollectionTable(name = "patient_problems", joinColumns = @JoinColumn(name = "patient_id"))
-    @Enumerated(EnumType.STRING)
-    @Column(name = "problem")
     private List<Problem> problems;
-
-    @Column(name = "active", nullable = false)
     private Boolean active;
-
-    public Patient() {
-        // Default constructor
-    }
 
     // Getters and Setters
     public Long getId() {
